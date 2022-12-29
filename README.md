@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -66,6 +67,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 =======
+=======
+>>>>>>> 56d0e0a96363ff1c4254b093171d17aa322c8dbb
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9558721&assignment_repo_type=AssignmentRepo)
 # Component 2 - Task
 
@@ -114,4 +117,7 @@ A 'Selected' product will show a modified template with PATCH (update button) an
 
 
 
+<<<<<<< HEAD
+>>>>>>> 56d0e0a96363ff1c4254b093171d17aa322c8dbb
+=======
 >>>>>>> 56d0e0a96363ff1c4254b093171d17aa322c8dbb
