@@ -6,13 +6,13 @@
 
 <div class="container">
     <div class="col text-end mb-2">
-        <button type="button" class="btn btn-secondary">Add New</button>
+        <a href="{{ route('products.create') }}" class="btn btn-secondary">Add New</a>
     </div>
     <div class="row">
         @foreach ($products as $product)
         <div class="col-4 mb-2">
             <div class="card h-100">
-                <img src="{{ URL('images/bookstock.jpg') }}" id="bookimg" class="card-img-top"
+                <img src="images/{{ $product -> image }}" id="bookimg" class="card-img-book"
                     alt="Palm Springs Road" />
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ $product -> title }}</h5>

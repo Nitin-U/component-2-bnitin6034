@@ -9,26 +9,34 @@
 
 <section class="get-in-touch">
     <h1 class="create-form-heading">Add Product</h1>
-    <form class="contact-form row">
+    <form class="contact-form row" action="{{ route('products.store') }}" method="POST">
+        @csrf
+        <div>
+        <select class="w-25 p-2" name="category">
+            <option selected value="cd">CD</option>
+            <option value="book">Book</option>
+            <option value="game">Game</option>
+        </select>
+        </div>
         <div class="form-field col-lg-6">
-            <input id="name" class="input-text js-input" type="text" required>
-            <label class="label" for="name">Title</label>
+            <input id="name" name="title" class="input-text js-input" type="text" required>
+            <label class="label" for="title">Title</label>
         </div>
         <div class="form-field col-lg-6 ">
-            <input id="email" class="input-text js-input" type="email" required>
-            <label class="label" for="email">Firstname (optional)</label>
+            <input id="email" name="firstname" class="input-text js-input" type="text" required>
+            <label class="label" for="firstname">Firstname (optional)</label>
         </div>
         <div class="form-field col-lg-6 ">
-            <input id="company" class="input-text js-input" type="text" required>
-            <label class="label" for="company">Surname / Band</label>
+            <input id="company" name="surname" class="input-text js-input" type="text" required>
+            <label class="label" for="surname">Surname / Band</label>
         </div>
         <div class="form-field col-lg-6 ">
-            <input id="phone" class="input-text js-input" type="text" required>
-            <label class="label" for="phone">Price</label>
+            <input id="phone" name="price" class="input-text js-input" type="text" required>
+            <label class="label" for="price">Price</label>
         </div>
         <div class="form-field col-lg-12">
-            <input id="message" class="input-text js-input" type="text" required>
-            <label class="label" for="message">Pages / Playlength</label>
+            <input id="message" name="pages" class="input-text js-input" type="text" required>
+            <label class="label" for="pages">Pages / Playlength</label>
         </div>
         <div class="form-field col-lg-12">
             <input class="submit-btn" type="submit" value="Submit">

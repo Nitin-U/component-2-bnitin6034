@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('surname');
             $table->float('price');
             $table->float('pages');
+            $table->string('image');
             $table->string('category');
             $table->timestamps();
         });

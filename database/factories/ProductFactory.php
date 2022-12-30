@@ -29,4 +29,34 @@ class ProductFactory extends Factory
             'category' => $this->faker->randomElement(['book', 'cd' ,'game']),
         ];
     }
+
+    public function makeBook()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg']),
+                'category' => 'book',
+            ];
+        });
+    }
+
+    public function makeCd()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg']),
+                'category' => 'book',
+            ];
+        });
+    }
+
+    public function makeGame()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg']),
+                'category' => 'book',
+            ];
+        });
+    }
 }
