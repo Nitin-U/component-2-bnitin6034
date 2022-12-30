@@ -15,6 +15,8 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        Product::factory()->makeBook()->count(50)->create();
+        Product::factory()->makeBook()->count(5)->create();
+        Product::factory()->makeCd()->count(5)->create();
+        Product::factory()->makeGame()->count(5)->create();
     }
 }

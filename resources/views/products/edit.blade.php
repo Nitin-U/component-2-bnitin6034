@@ -15,9 +15,9 @@
         @method('PUT')
         <div class="d-flex justify-content-between align-items-center">
             <select class="w-25 p-2" name="category">
-                <option selected value="cd">CD</option>
-                <option value="book">Book</option>
-                <option value="game">Game</option>
+                <option value="cd" @if($product->category=='cd') selected @endif>CD</option>
+                <option value="book" @if($product->category=='book') selected @endif>Book</option>
+                <option value="game" @if($product->category=='game') selected @endif>Game</option>
             </select>
             <i class="fa-solid fa-trash fa-2xl"></i>
         </div>

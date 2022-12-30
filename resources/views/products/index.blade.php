@@ -22,10 +22,10 @@
                     <p class="card-text">
                         @if($product->category == 'book')
                     <p>Page {{ $product -> pages }}</p>
-                    @elseif($product->category == 'cd')
-                    <p>Duration {{ $product -> pages }}</p>
+                    @elseif($product->category == 'Cd')
+                    <p>Playlength {{ $product -> pages }} min</p>
                     @else
-                    <p>Playlength {{ $product -> pages }}</p>
+                    <p>PEGI - {{ $product -> pages }}</p>
                     @endif
                     </p>
                     <form action="{{ route('products.destroy',$product->id) }}" method="POST">
