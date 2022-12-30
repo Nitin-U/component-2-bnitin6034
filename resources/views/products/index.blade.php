@@ -3,6 +3,7 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<script src="https://kit.fontawesome.com/f6dd6c55d1.js" crossorigin="anonymous"></script>
 
 <div class="container">
     <div class="col text-end mb-2">
@@ -27,9 +28,14 @@
                     <p>Playlength {{ $product -> pages }}</p>
                     @endif
                     </p>
-                    <div class="text-end">
-                        <a href="{{ route('products.edit',$product->id) }}" class="btn btn-secondary">Select</a>
-                    </div>
+                    <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <div class="text-end">
+                            <a href="{{ route('products.edit',$product->id) }}" class="btn btn-secondary">Select</a>
+                            <button class="btn fa-solid fa-trash fa-2xl"></button>
+                        </div>
+                    </form>
                 </div>
                 <!--div class="card-footer">
                     <small class="text-muted">Last updated 3 mins ago</small>
