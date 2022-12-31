@@ -1,5 +1,40 @@
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
 .card-img-book{
     width: 100%;
     height: 15vw;
-    object-fit: cover;
+    object-fit: contain;
 }
+
+/* .select-btn{
+    color:aquamarine;
+    background-color: bisque;
+    border: none; 
+} */
+#button-addnew{
+    color: white;
+    background-color: #6667AB;
+    border: none;
+}
+
+#button-cross{
+    color: #CC2936;
+}
+
+#button-cross:hover{
+    color:black;
+    transition: 0.5s;
+}
+
+#button-select{
+    color: white;
+    background-color: #6667AB;
+    border: none;
+}
+
+

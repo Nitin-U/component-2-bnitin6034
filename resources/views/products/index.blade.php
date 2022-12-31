@@ -1,18 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-
+<link rel="stylesheet" href="{{ asset('css/global.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <script src="https://kit.fontawesome.com/f6dd6c55d1.js" crossorigin="anonymous"></script>
 
 <div class="container">
+    <div class="col text-center">
+        <h1>All Products<i class="fa-solid fa-basket-shopping ms-3"></i></h1>
+        <hr>
+    </div>
     <div class="col text-end mb-2">
-        <a href="{{ route('products.create') }}" class="btn btn-secondary">Add New</a>
+        <a href="{{ route('products.create') }}" class="btn btn-secondary" id="button-addnew">Add New</a>
     </div>
     <div class="row">
         @foreach ($products as $product)
         <div class="col-4 mb-2">
-            <div class="card h-100">
+            <div class="card h-100 position-relative">
                 <img src="images/{{ $product -> image }}" id="bookimg" class="card-img-book" alt="Palm Springs Road" />
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ $product -> title }}</h5>
@@ -32,8 +36,14 @@
                         @csrf
                         @method('DELETE')
                         <div class="text-end">
-                            <a href="{{ route('products.edit',$product->id) }}" class="btn btn-secondary">Select</a>
-                            <button class="btn fa-solid fa-trash fa-2xl"></button>
+                            <a href="{{ route('products.edit',$product->id) }}" class="btn btn-secondary select-btn" id="button-select">Select</a>
+                            <!-- <div class="btn btn-light rounded-pill position-absolute top-0 end-0 p-0">
+                                <button class="btn fa-solid fa-trash fa-md "></button>
+                            </div> -->
+                            <div class="position-absolute top-0 end-0 p-0">
+                                <button class="btn fa-solid fa-circle-xmark fa-md" id="button-cross"></button>
+                            </div>
+                            
                         </div>
                     </form>
                 </div>

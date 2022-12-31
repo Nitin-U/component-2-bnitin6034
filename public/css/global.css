@@ -1,0 +1,13 @@
+#navbar-search{
+    color: white;
+    background-color: black;
+}
+#navbar-search:hover{
+    background-color: #6667AB;
+}
+
+#nav-logo{
+    width: 50px;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,31 @@
+#welcome-body{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-image: url("/images/welcome.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 35vw;
+    /* filter: brightness(50%); */
+}  
+
+.welcome-paragraph{
+    text-align: center;
+}
+
+.welcome-icon-body{
+    color: aliceblue;
+}
+
+footer {
+    background: #1A1E25;
+    color: #868c96;
+}
+
+footer p {
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 44px;
+}
