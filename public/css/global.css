@@ -1,3 +1,15 @@
+/*Custom google font*/
+/*Berkshire*/
+body,div,h1,h2,h3,h4,h5,h6,a,p{
+  font-family: 'Berkshire Swash', cursive;
+}
+
+/*Alegreya*/
+body,div,h1,h2,h3,h4,h5,h6,a,p{
+  font-family: 'Alegreya', serif;
+}
+
+
 /*Navbar Changes Made*/
 #navbar-search{
     color: white;
@@ -37,6 +49,7 @@
 body{
   min-height: 100vh;
 }
+
 
 /*Footer Section Starts*/
 .footer-dark {
