@@ -104,6 +104,37 @@
     <main class="">
         @yield('content')
     </main>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Books</a></li>
+                            <li><a href="#">Cds</a></li>
+                            <li><a href="#">Games</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Sellers</a></li>
+                            <li><a href="#">Teams</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Essential Mart</h3>
+                        <p>We are a one-stop shop for all your entertainment needs. We offer a wide selection of books, CDs, and games at affordable prices. Our inventory is constantly updating, so there is always something new to discover. Whether you are looking for the latest bestseller or a classic album, you can find it here. We also have a variety of games for all ages, from board games to video games. Thank you for visiting our site, and we hope you find something you love!</p>
+                    </div>
+                    
+                </div>
+                <p class="copyright">Essential Mart | Nitin Utsav Bartaula | © 2022</p>
+            </div>
+        </footer>
+    </div>
     </div>
 </body>
 
