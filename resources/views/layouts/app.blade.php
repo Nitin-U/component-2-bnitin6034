@@ -12,11 +12,13 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f6dd6c55d1.js" crossorigin="anonymous"></script>
-
+    
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
@@ -24,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <a href="{{ route('welcome') }}"><img src="images/logo.png" alt="logo" id="nav-logo"></a>
+                <a href="{{ route('welcome') }}"><img src="{{url('images/logo.png')}}" class="nav-logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +101,7 @@
     </div>
     </nav>
 
-    <main class="py-4">
+    <main class="">
         @yield('content')
     </main>
     </div>

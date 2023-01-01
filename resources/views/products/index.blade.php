@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/global.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/global.css') }}">
 <script src="https://kit.fontawesome.com/f6dd6c55d1.js" crossorigin="anonymous"></script>
+
 
 <div class="container">
     <div class="col text-center">
@@ -54,5 +55,10 @@
         </div>
         @endforeach
     </div>
+    <div class="d-flex justify-content-center">
+{{ $products->links()  }}
 </div>
+</div>
+
+
 @endsection

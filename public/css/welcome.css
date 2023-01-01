@@ -1,10 +1,9 @@
-#welcome-body{
+.welcome-body{
     padding-top: 10rem;
     padding-bottom: 10rem;
     background-image: url("/images/welcome.jpg");
     background-size: cover;
-    width: 100vw;
-    height: 35vw;
+    
     /* filter: brightness(50%); */
 }  
 
@@ -22,7 +21,7 @@ footer {
 }
 
 footer p {
-    padding: 40px 0;
+    height: 10vw;
     text-align: center;
 }
 

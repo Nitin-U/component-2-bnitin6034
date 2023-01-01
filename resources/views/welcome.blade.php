@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 
     <div class="container-welcome">
         <div class="col mb-5">
-        <div class="row w-100" id="welcome-body">
+        <div class="row w-100 welcome-body m-0">
             <div class="col text-center">
                 <h1 class="text-white">Marketplace for Books, Cds and Games</h1>
                 

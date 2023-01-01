@@ -1,13 +1,32 @@
 #navbar-search{
     color: white;
     background-color: black;
+    border: none;
 }
 #navbar-search:hover{
     background-color: #6667AB;
 }
 
-#nav-logo{
+.nav-logo{
     width: 50px;
     margin: 0;
     padding: 0;
+}
+
+.pagination > li > a{
+    color: black;
+}
+
+.pagination>li.active>a {
+    background-color: orange !important;
+  }
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    z-index: 3;
+    color: white;
+    background-color: #5A5A96;
+    border-color: #ddd;
 }
