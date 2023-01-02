@@ -39,6 +39,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $validateMsg = $request -> validate([
+            'title' => 'required',
+            'firstname' => 'nullable|alpha',
+            'surname' => 'required',
+            'price' => 'required',
+            'pages' => 'required',
+            'image' => 'required',
+        ]);
+
         Product::create($request->all());
         return redirect()->route('products.index');
     }

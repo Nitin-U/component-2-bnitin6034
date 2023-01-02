@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id()->autoincrement();
             $table->string('title');
-            $table->string('firstname')->nullable;
+            $table->string('firstname')->nullable();
             $table->string('surname');
             $table->float('price');
             $table->float('pages');

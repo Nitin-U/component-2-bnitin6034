@@ -15,31 +15,72 @@
         @method('PUT')
         <div class="d-flex justify-content-between align-items-center">
             <select class="w-25 p-2 mb-4" name="category">
-                <option value="cd" @if($product->category=='cd') selected @endif>CD</option>
+                <option value="cd" @if($product->category=='Cd') selected @endif>CD</option>
                 <option value="book" @if($product->category=='book') selected @endif>Book</option>
-                <option value="game" @if($product->category=='game') selected @endif>Game</option>
+                <option value="game" @if($product->category=='Game') selected @endif>Game</option>
             </select>
         </div>
-        <div class="form-field col-lg-6">
-            <input id="name" name="title" class="input-text js-input" type="text" value="{{ $product->title }}" required>
+
+        <div class="form-field col-lg-6 mt-4">
+            <input id="name" name="title" class="input-text js-input" type="text" value="{{ $product -> title }}">
             <label class="label" for="title">Title</label>
         </div>
-        <div class="form-field col-lg-6 ">
-            <input id="email" name="firstname" class="input-text js-input" type="text" value="{{ $product->firstname }}" required>
+        <div class="form-field col-lg-6 mt-4">
+            <input id="email" name="firstname" class="input-text js-input" type="text" value="{{ $product -> firstname }}">
             <label class="label" for="firstname">Firstname (optional)</label>
         </div>
+
+        <!------ Error Message Here ---------->
+        <div class="form-field col-lg-6 mb-5">@error('title')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+        <div class="form-field col-lg-6">@error('firstname')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+
         <div class="form-field col-lg-6 ">
-            <input id="company" name="surname" class="input-text js-input" type="text" value="{{ $product->surname }}" required>
+            <input id="company" name="surname" class="input-text js-input" type="text" value="{{ $product -> surname }}">
             <label class="label" for="surname">Surname / Band</label>
         </div>
         <div class="form-field col-lg-6 ">
-            <input id="phone" name="price" class="input-text js-input" type="text" value="{{ $product->price }}" required>
+            <input id="phone" name="price" class="input-text js-input" type="text" value="{{ $product -> price }}">
             <label class="label" for="price">Price</label>
         </div>
+
+        <!------ Error Message Here ---------->
+        <div class="col-lg-6 mb-5">@error('surname')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+        <div class="col-lg-6">@error('price')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+
         <div class="form-field col-lg-12">
-            <input id="message" name="pages" class="input-text js-input" type="text" value="{{ $product->pages }}" required>
+            <input id="message" name="pages" class="input-text js-input" type="text" value="{{ $product -> pages }}">
             <label class="label" for="pages">Pages / Playlength</label>
         </div>
+
+        <!------ Error Message Here ---------->
+        <div class="col-lg-12 mb-5">@error('pages')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+
+        <div class="form-field col-lg-12">
+            <input id="message" name="image" class="input-text js-input" type="text" value="{{ $product -> image }}">
+            <label class="label" for="images">Image</label>
+        </div>
+
+        <!------ Error Message Here ---------->
+        <div class="col-lg-12 mb-5">@error('image')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+        
         <div class="form-field col-lg-12 d-flex justify-content-between align-items-center">
             <input class="submit-btn" type="submit" value="Submit">
         </div>
