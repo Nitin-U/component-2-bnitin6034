@@ -4,6 +4,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="{{ asset('css/global.css') }}">
 <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+<script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Linking mdbootstrap and Form's Custom CSS ---------->
@@ -19,6 +20,11 @@
                 <option value="book" @if($product->category=='book') selected @endif>Book</option>
                 <option value="game" @if($product->category=='Game') selected @endif>Game</option>
             </select>
+            <!------ Error Message Here ---------->
+            <div class="form-field col-lg-6 mb-3 p-0">@error('category')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
         </div>
 
         <div class="form-field col-lg-6 mt-4">
@@ -70,9 +76,12 @@
             @enderror
         </div>
 
-        <div class="form-field col-lg-12">
+        <!-- <div class="form-field col-lg-12">
             <input id="message" name="image" class="input-text js-input" type="text" value="{{ $product -> image }}">
             <label class="label" for="images">Image</label>
+        </div> -->
+        <div class="mb-3">
+            <input class="form-control" name="image" type="file" id="formFile">
         </div>
 
         <!------ Error Message Here ---------->

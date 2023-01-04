@@ -40,16 +40,19 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $validateMsg = $request -> validate([
-            'title' => 'required',
-            'firstname' => 'nullable|alpha',
-            'surname' => 'required',
-            'price' => 'required',
-            'pages' => 'required',
+            'title' => 'required|alpha|max:50',
+            'firstname' => 'nullable|alpha|min:3',
+            'surname' => 'required|alpha',
+            'price' => 'required|numeric',
+            'pages' => 'required|numeric',
             'image' => 'required',
+            'category' => 'required|in:cd,book,game',
+        ],[
+            'image.image' => 'Selected file must be an image.'
         ]);
 
         Product::create($request->all());
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('success','Product Added Sucessfully!');
     }
 
     /**
@@ -83,6 +86,19 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        $validateMsg = $request -> validate([
+            'title' => 'required|alpha|max:50',
+            'firstname' => 'nullable|alpha|min:3',
+            'surname' => 'required|alpha',
+            'price' => 'required|numeric',
+            'pages' => 'required|numeric',
+            'image' => 'required|image',
+            'category' => 'required|in:cd,book,game',
+        ],[
+            'image.image' => 'Selected file must be an image.'
+        ]);
+
+
         $product->update($request->all());
         return redirect()->route('products.index');
     }

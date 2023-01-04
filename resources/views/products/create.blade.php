@@ -14,18 +14,24 @@
         @csrf
         <div>
             <select class="w-25 p-2 mb-4" name="category">
-                <option selected value="cd">CD</option>
-                <option value="book">Book</option>
-                <option value="game">Game</option>
+                <option selected value="select" disabled>--Select the category--</option>
+                <option value="cd" {{ old('category') == "cd" ? 'selected' : '' }}>CD</option>
+                <option value="book" {{ old('category') == "book" ? 'selected' : '' }}>Book</option>
+                <option value="game" {{ old('category') == "game" ? 'selected' : '' }}>Game</option>
             </select>
+            <!------ Error Message Here ---------->
+            <div class="form-field col-lg-6 mb-3 p-0">@error('category')
+                <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
         </div>
 
         <div class="form-field col-lg-6 mt-4">
-            <input id="name" name="title" class="input-text js-input" type="text">
+            <input id="name" name="title" value="{{old('title')}}" class="input-text js-input" type="text">
             <label class="label" for="title">Title</label>
         </div>
         <div class="form-field col-lg-6 mt-4">
-            <input id="email" name="firstname" class="input-text js-input" type="text">
+            <input id="email" name="firstname" value="{{old('firstname')}}" class="input-text js-input" type="text">
             <label class="label" for="firstname">Firstname (optional)</label>
         </div>
 
@@ -40,11 +46,11 @@
         </div>
 
         <div class="form-field col-lg-6 ">
-            <input id="company" name="surname" class="input-text js-input" type="text">
+            <input id="company" name="surname" value="{{old('surname')}}" class="input-text js-input" type="text">
             <label class="label" for="surname">Surname / Band</label>
         </div>
         <div class="form-field col-lg-6 ">
-            <input id="phone" name="price" class="input-text js-input" type="text">
+            <input id="phone" name="price" value="{{old('price')}}" class="input-text js-input" type="text">
             <label class="label" for="price">Price</label>
         </div>
 
@@ -59,7 +65,7 @@
         </div>
 
         <div class="form-field col-lg-12">
-            <input id="message" name="pages" class="input-text js-input" type="text">
+            <input id="message" name="pages" value="{{old('pages')}}" class="input-text js-input" type="text">
             <label class="label" for="pages">Pages / Playlength</label>
         </div>
 
@@ -69,9 +75,12 @@
             @enderror
         </div>
 
-        <div class="form-field col-lg-12">
+        <!-- <div class="form-field col-lg-12">
             <input id="message" name="image" class="input-text js-input" type="text">
             <label class="label" for="images">Image</label>
+        </div> -->
+        <div class="mb-3">
+            <input class="form-control" name="image" type="file" id="formFile">
         </div>
 
         <!------ Error Message Here ---------->

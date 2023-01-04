@@ -28,7 +28,7 @@ body,div,h1,h2,h3,h4,h5,h6,a,p{
 
 
 /*Pagination Modifications Here*/
-.pagination > li > a{
+/* .pagination > li > a{
     color: black;
 }
 
@@ -44,7 +44,7 @@ body,div,h1,h2,h3,h4,h5,h6,a,p{
     color: white;
     background-color: #5A5A96;
     border-color: #ddd;
-}
+} */
 
 body{
   min-height: 100vh;
