@@ -40,11 +40,20 @@
             <div class="container-fluid">
                 <!-- <a class="navbar-brand" href="#">Navbar</a> -->
                 <a href="{{ route('welcome') }}"><img src="{{url('images/logo.png')}}" class="nav-logo"></a>
+                <span class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#searchContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
+              
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -93,12 +102,12 @@
                         </li>
                         @endguest
                     </ul>
-                    <form class="d-flex">
+                    <!-- <form class="d-flex">
                         <div class="input-group">
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-primary" id="navbar-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
-                    </form>
+                    </form> -->
 
                     <!-- <div class="input-group">
                         <div id="navbar-search-autocomplete">
@@ -110,11 +119,21 @@
                         </button>
                     </div> -->
                 </div>
+                <div class="collapse navbar-collapse  justify-content-end" id="searchContent">
+                    <form class="d-flex mt-3">
+                        <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary" id="navbar-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
     </div>
     </nav>
 
     <main class="">
+        @include('flash-message')
+        
         @yield('content')
     </main>
 
