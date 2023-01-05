@@ -132,9 +132,8 @@
     </nav>
 
     <main class="">
-        @include('flash-message')
-        
         @yield('content')
+        @include('flash-message')
     </main>
 
     <div class="footer-dark">
