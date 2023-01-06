@@ -11,9 +11,11 @@
         <h1>All Products<i class="fa-solid fa-basket-shopping ms-3"></i></h1>
         <hr>
     </div>
+    {{--@can('editor')--}}
     <div class="col text-end mb-2">
-        <a href="{{ route('products.create') }}" class="btn btn-secondary" id="button-addnew">Add New</a>
+        <a href="{{ route('products.create') }}" class="btn btn-secondary sm-margin-addbtn" id="button-addnew">Add New</a>
     </div>
+    {{--@endcan--}}
     <div class="row">
         @foreach ($products as $product)
         <div class="col-lg-4 col-md-4 col-sm-6 sm-margin mb-4">
@@ -37,11 +39,11 @@
                         @csrf
                         @method('DELETE')
                         <div class="text-end">
-                            <a href="{{ route('products.edit',$product->id) }}" class="btn btn-secondary select-btn" id="button-select">Select</a>
+                            <a href="{{ route('products.show',$product->id) }}" class="btn btn-secondary select-btn" id="button-select">Select</a>
                             <!-- <div class="btn btn-light rounded-pill position-absolute top-0 end-0 p-0">
                                 <button class="btn fa-solid fa-trash fa-md "></button>
                             </div> -->
-                            <div class="position-absolute top-0 end-0 p-0">
+                            <div class="position-absolute top-0 start-100 translate-middle">
                                 <button class="btn fa-solid fa-circle-xmark fa-md" id="button-cross"></button>
                             </div>
                             

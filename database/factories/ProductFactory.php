@@ -24,6 +24,7 @@ class ProductFactory extends Factory
             'firstname' => $this->faker->firstName($gender),
             'surname' => $this->faker->lastName,
             //'price' => $this->faker->numberBetween($min = 9.99, $max = 99.99),
+            'description'=>$this->faker->paragraph(),
             'price'=>$this->faker->randomFloat(1,20,30,40),
             'category' => $this->faker->randomElement(['book', 'cd' ,'game']),
         ];
