@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('cds', function (Blueprint $table) {
             $table->id()->autoincrement();
             $table->string('title');
-            $table->string('firstname')->nullable();
+            $table->string('name')->nullable();
             $table->string('band');
             $table->float('price');
             $table->string('description',255);
