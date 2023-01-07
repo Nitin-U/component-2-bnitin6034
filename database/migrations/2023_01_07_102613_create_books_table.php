@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('description',255);
             $table->float('pages');
             $table->string('image');
+            $table->string('category');
             $table->timestamps();
         });
     }
