@@ -43,9 +43,9 @@
                             <!-- <div class="btn btn-light rounded-pill position-absolute top-0 end-0 p-0">
                                 <button class="btn fa-solid fa-trash fa-md "></button>
                             </div> -->
-                            <div class="position-absolute top-0 start-100 translate-middle">
+                            <!-- <div class="position-absolute top-0 start-100 translate-middle">
                                 <button class="btn fa-solid fa-circle-xmark fa-md" id="button-cross"></button>
-                            </div>
+                            </div> -->
                             
                         </div>
                     </form>

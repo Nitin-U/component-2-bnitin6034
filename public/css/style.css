@@ -56,6 +56,14 @@ hr{
 
 .product{background-color: #eee}
 
+.show-edit, .show-delete, .show-anchor{
+    color: #FF0000;
+    text-decoration: none; 
+}
+.show-edit, .show-delete:hover, .show-anchor:hover{
+    color: #FF0000;
+}
+
 .act-price{
     color:red;
     font-weight: 700}

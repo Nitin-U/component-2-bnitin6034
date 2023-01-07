@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<script src="https://kit.fontawesome.com/f6dd6c55d1.js" crossorigin="anonymous"></script>
 <div class="container-fluid mt-5 mb-5">
     <div class="row d-flex justify-content-center">
         <div class="col-md-10">
@@ -19,14 +20,22 @@
                     <div class="col-md-6">
                         <div class="product p-4" style="min-height: 100%">
                             <div class="d-flex justify-content-between align-items-center mb-5">
-                                <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span
-                                        class="ml-1">Back
-                                    </span>
+                                <div class="d-flex align-items-center">
+                                    <a class="show-anchor" href="{{ route('products.index') }}">
+                                        <i class="fa fa-long-arrow-left"></i>
+                                        <span class="ml-1">Back
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="d-flex justify-content-end">
-                                    <i class="fa-solid fa-pen-to-square mx-3"></i>
-                                    <i class="fa-solid fa-trash"></i>
-                                </div>
+                                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <a href="{{route('products.edit',$product->id)}}"><i
+                                                class="show-edit fa-solid fa-pen-to-square mx-3"></i></a>
+                                        <button class="show-delete btn fa-solid fa-trash"></button>
+                                    </div>
+                                </form>
 
                             </div>
                             <div class="mt-4 mb-3"> <span
