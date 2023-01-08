@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class CdController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:iscdAdmin')->except(['index','show']);
+    }
     /**
      * Display a listing of the resource.
      *
