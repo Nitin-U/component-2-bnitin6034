@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 <div class="error-container">
     <div class="alert notice notice-danger alert-dismissible fade show" role="alert">
-        <strong class="me-4">Please check the form below for any errors</strong>
+        <strong class="me-4">Please check the form for any errors before submitting</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 </div>

@@ -36,19 +36,19 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        // $validateMsg = $request -> validate([
-        //     'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-        //     'firstname' => 'nullable|alpha|min:3',
-        //     'surname' => 'required|alpha',
-        //     'price' => 'required|numeric',
-        //     'description' => 'required|min:25',
-        //     'pages' => 'required|numeric',
-        //     'image' => 'required',
-        // ],[
-        //     'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
-        //     'image.image' => 'Selected file must be an image.'
-        // ]);
+        //dd($request);
+        $validateMsg = $request -> validate([
+            'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
+            'firstname' => 'nullable|alpha|min:3',
+            'surname' => 'required|alpha',
+            'price' => 'required|numeric',
+            'description' => 'required|min:25',
+            'pages' => 'required|numeric',
+            'image' => 'required',
+        ],[
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'image.image' => 'Selected file must be an image.'
+        ]);
         Book::create($request->all());
         return redirect()->route('books.index')->with('success','Book Added Sucessfully!');
     }
@@ -87,20 +87,20 @@ class BookController extends Controller
         if($request->image==null){
             $request['image']=$book->image;
         }
-        // $validateMsg = $request -> validate([
-        //     'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-        //     'firstname' => 'nullable|alpha|min:3',
-        //     'surname' => 'required|alpha',
-        //     'price' => 'required|numeric',
-        //     'description' => 'required|min:25',
-        //     'pages' => 'required|numeric',
-        // ],[
-        //     'title.regex' => 'Title must only contain alphabets, whitespace & hyphens'
-        // ]);
+        $validateMsg = $request -> validate([
+            'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
+            'firstname' => 'nullable|alpha|min:3',
+            'surname' => 'required|alpha',
+            'price' => 'required|numeric',
+            'description' => 'required|min:25',
+            'pages' => 'required|numeric',
+        ],[
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens'
+        ]);
 
         $request->except('image');
         $book->update($request->all());
-        return redirect()->route('books.show',$book->id);
+        return redirect()->route('books.show',$book->id)->with('success','Book Data Updated Sucessfully!');
     }
 
     /**

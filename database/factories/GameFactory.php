@@ -26,7 +26,6 @@ class GameFactory extends Factory
             'price'=>$this->faker->randomFloat(1,20,30,40),
             'image' => $this->faker->randomElement(['game1.jpg', 'game2.jpg', 'game3.jpg']),
             'pegi' => $this->faker->randomElement(['3','7','12','16','18']),
-            'category' => 'Game',
         ];
     }
 }

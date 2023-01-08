@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('description');
             $table->float('pegi');
             $table->string('image');
-            $table->string('category');
+            $table->string('category')->default('game');
             $table->timestamps();
         });
     }

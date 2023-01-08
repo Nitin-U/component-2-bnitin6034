@@ -26,7 +26,6 @@ class CdFactory extends Factory
             'price'=>$this->faker->randomFloat(1,20,30,40),
             'image' => $this->faker->randomElement(['cd1.jpg', 'cd2.jpg', 'cd3.jpg']),
             'playlength' => $this->faker->numberBetween($min = 2, $max = 59),
-            'category' => 'Cd',
         ];
     }
 }

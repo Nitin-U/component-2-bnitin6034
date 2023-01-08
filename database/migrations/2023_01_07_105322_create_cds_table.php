@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('description');
             $table->float('playlength');
             $table->string('image');
-            $table->string('category');
+            $table->string('category')->default('cd');
             $table->timestamps();
         });
     }
