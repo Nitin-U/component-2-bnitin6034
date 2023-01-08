@@ -16,10 +16,10 @@
     font-size: large;
 }
 .notice-success {
-    border-color: #80D651;
+    border-color: #2EA421;
 }
 .notice-success>strong {
-    color: #80D651;
+    color: #2EA421;
 }
 .notice-info {
     border-color: #45ABCD;

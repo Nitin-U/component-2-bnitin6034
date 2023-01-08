@@ -14,7 +14,8 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        $games = Game::latest()->paginate(8);
+        return view('games.index',compact('games'));
     }
 
     /**
@@ -24,7 +25,7 @@ class GameController extends Controller
      */
     public function create()
     {
-        //
+        return view('games.create');
     }
 
     /**
@@ -35,7 +36,20 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateMsg = $request -> validate([
+            'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
+            'name' => 'nullable|alpha|min:3',
+            'console' => 'required|alpha',
+            'price' => 'required|numeric',
+            'description' => 'required|min:25',
+            'pegi' => 'required|numeric',
+            'image' => 'required',
+        ],[
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'image.image' => 'Selected file must be an image.'
+        ]);
+        Game::create($request->all());
+        return redirect()->route('games.index')->with('success','Game Added Sucessfully!');
     }
 
     /**
@@ -46,7 +60,7 @@ class GameController extends Controller
      */
     public function show(Game $game)
     {
-        //
+        return view('games.show',compact('game'));
     }
 
     /**
@@ -57,7 +71,7 @@ class GameController extends Controller
      */
     public function edit(Game $game)
     {
-        //
+        return view ('games.edit',compact('game'));
     }
 
     /**
@@ -69,7 +83,23 @@ class GameController extends Controller
      */
     public function update(Request $request, Game $game)
     {
-        //
+        if($request->image==null){
+            $request['image']=$game->image;
+        }
+        $validateMsg = $request -> validate([
+            'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
+            'name' => 'nullable|alpha|min:3',
+            'console' => 'required|alpha',
+            'price' => 'required|numeric',
+            'description' => 'required|min:25',
+            'pegi' => 'required|numeric',
+        ],[
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens'
+        ]);
+
+        $request->except('image');
+        $game->update($request->all());
+        return redirect()->route('games.show',$game->id)->with('success','Game Data Updated Sucessfully!');
     }
 
     /**
@@ -80,6 +110,7 @@ class GameController extends Controller
      */
     public function destroy(Game $game)
     {
-        //
+        $game->delete();
+        return redirect()->route('games.index')->with('success','Game deleted successfully');
     }
 }
