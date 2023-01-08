@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('firstname')->nullable();
             $table->string('surname');
             $table->float('price');
-            $table->string('description',255);
+            $table->text('description');
             $table->float('pages');
             $table->string('image');
-            $table->string('category');
+            $table->string('category')->default('book');
             $table->timestamps();
         });
     }

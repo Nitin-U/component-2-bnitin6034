@@ -24,7 +24,7 @@ hr{
 }
 
 #button-cross{
-    color: #CC2936;
+    color: #B71C1C;
 }
 
 #button-cross:hover{
@@ -57,15 +57,16 @@ hr{
 .product{background-color: #eee}
 
 .show-edit, .show-delete, .show-anchor{
-    color: #FF0000;
+    color: #B71C1C;
     text-decoration: none; 
 }
-.show-edit, .show-delete:hover, .show-anchor:hover{
-    color: #FF0000;
+.show-edit:hover, .show-delete:hover, .show-anchor:hover{
+    color: #000;
+    transition: .6s ease;
 }
 
 .act-price{
-    color:red;
+    color: #B71C1C;
     font-weight: 700}
 
 .dis-price{
@@ -85,24 +86,26 @@ label.radio input{
 
 label.radio span{
     padding: 2px 9px;
-    border: 2px solid #ff0000;
+    border: 2px solid #B71C1C;
     display: inline-block;
-    color: #ff0000;
+    color: #B71C1C;
     border-radius: 3px;
     text-transform: uppercase}
 
 label.radio input:checked+span{
-    border-color: #ff0000;
-    background-color: #ff0000;
+    border-color: #B71C1C;
+    background-color: #B71C1C;
     color: #fff}
 
 .btn-danger{
-    background-color: #ff0000 !important;
-    border-color: #ff0000 !important}
+    background-color: #B71C1C !important;
+    border-color: #B71C1C !important}
 
 .btn-danger:hover{
-    background-color: #da0606 !important;
-    border-color: #da0606 !important}
+    background-color: #000 !important;
+    border-color: #000 !important;
+    transition: .6s ease;
+}
 
 .btn-danger:focus{
     box-shadow: none}

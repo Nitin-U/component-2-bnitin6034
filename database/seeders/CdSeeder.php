@@ -15,6 +15,6 @@ class CdSeeder extends Seeder
      */
     public function run()
     {
-        Cd::factory()->count(10)->create();
+        Cd::factory()->count(50)->create();
     }
 }

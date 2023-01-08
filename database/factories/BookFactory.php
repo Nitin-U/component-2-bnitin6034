@@ -26,7 +26,6 @@ class BookFactory extends Factory
             'price'=>$this->faker->randomFloat(1,20,30,40),
             'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg']),
             'pages' => $this->faker->numberBetween($min = 100, $max = 500),
-            'category' => 'book',
         ];
     }
 }

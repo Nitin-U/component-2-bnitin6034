@@ -50,6 +50,17 @@ body{
   min-height: 100vh;
 }
 
+/*Custom Button Colors for global use*/
+.btn-primary{
+  background-color: #B71C1C !important;
+  border-color: #B71C1C !important;
+}
+
+.btn-primary:hover{
+  background-color: #000 !important;
+  border-color: #000 !important;
+  transition: 0.6s ease;
+}
 
 /*Footer Section Starts*/
 .footer-dark {

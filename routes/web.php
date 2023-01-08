@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CdController;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +27,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Route for our Product Controller functions
 Route::resource('products', ProductController::class);
+
+//Route for our Book Controller functions
+Route::resource('books', BookController::class);
+//Route for our Cd Controller functions
+Route::resource('cds', CdController::class);
+//Route for our Book Controller functions
+Route::resource('games', GameController::class);

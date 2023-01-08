@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('band');
             $table->float('price');
-            $table->string('description',255);
+            $table->text('description');
             $table->float('playlength');
             $table->string('image');
             $table->string('category');
