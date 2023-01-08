@@ -25,7 +25,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-                /* define a admin user role */
+                /* define an admin user role */
                 Gate::before(function ($user) {
                     if ($user->role == 'admin') {
                         return true;
@@ -35,6 +35,33 @@ class AuthServiceProvider extends ServiceProvider
                 Gate::define('editor', function($user) {
 
                     if ($user->role == 'editor') {
+                        return true;
+                    }
+         
+                 });
+
+                /* define a book admin user role */
+                 Gate::define('isbookAdmin', function($user) {
+
+                    if ($user->role == 'bookAdmin') {
+                        return true;
+                    }
+         
+                 });
+
+                 /* define a cd admin user role */
+                 Gate::define('iscdAdmin', function($user) {
+
+                    if ($user->role == 'cdAdmin') {
+                        return true;
+                    }
+         
+                 });
+
+                 /* define a game admin user role */
+                 Gate::define('isgameAdmin', function($user) {
+
+                    if ($user->role == 'gameAdmin') {
                         return true;
                     }
          
