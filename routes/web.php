@@ -34,3 +34,6 @@ Route::resource('books', BookController::class);
 Route::resource('cds', CdController::class);
 //Route for our Book Controller functions
 Route::resource('games', GameController::class);
+
+//Route for our Search Controller functions
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'index'])->name('search');

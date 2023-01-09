@@ -126,10 +126,10 @@
                     </div> -->
                 </div>
                 <div class="collapse navbar-collapse  justify-content-end" id="searchContent">
-                    <form class="d-flex align-items-center">
+                    <form class="d-flex align-items-center" action="{{ route('search') }}" method="GET">
                         <div class="input-group">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary" id="navbar-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="form-control" name="search" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary" value="submit" id="navbar-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                 </div>
