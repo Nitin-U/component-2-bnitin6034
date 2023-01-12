@@ -15,7 +15,10 @@ class Cd extends Model
     {
         if($filters['search'] ?? false)
         {
-            $query->where('title','like','%'.$filters['search'].'%');
+            $query->where('title','like','%'.$filters['search'].'%')
+            ->orWhere('name','like','%'.$filters['search'].'%')
+            ->orWhere('band','like','%'.$filters['search'].'%')
+            ->orWhere('category','like','%'.$filters['search'].'%');
         }
         else {
             return $query->whereRaw('1 = 0');

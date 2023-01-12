@@ -15,7 +15,16 @@ class Book extends Model
     {
         if($filters['search'] ?? false)
         {
-            $query->where('title','like','%'.$filters['search'].'%');
+            $query->where('title','like','%'.$filters['search'].'%')
+            ->orWhere('firstname','like','%'.$filters['search'].'%')
+            ->orWhere('surname','like','%'.$filters['search'].'%')
+            ->orWhere('category','like','%'.$filters['search'].'%');
+
+            if($filters['sort'] ?? false) {
+                $query->orderBy('price', $filters['sort']);
+            } elseif ($filters['sort'] ?? false) {
+                $query->orderBy('pages', $filters['sort']);
+            }
         }
         else {
             return $query->whereRaw('1 = 0');
