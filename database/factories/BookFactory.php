@@ -19,7 +19,7 @@ class BookFactory extends Factory
     {
         $gender = $this->faker->randomElement(['male', 'female']);
         return [
-            'title' => $this->faker->randomElement(['Oliver Twist', 'Origin of Species', 'A Week with Gandhi', 'A Woman\'s Life', 'Aadhe Adhure', 'Adventures of Sherlock Holmes', 'Adventures of Tom Sawyer', 'Ain - i - Akbari', 'Akbarnama', 'Alice in Wonderland']),
+            'title' => $this->faker->unique()->word,
             'firstname' => $this->faker->firstName($gender),
             'surname' => $this->faker->lastName,
             'description'=>$this->faker->paragraph(),

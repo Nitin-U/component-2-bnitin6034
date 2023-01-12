@@ -19,7 +19,7 @@ class GameFactory extends Factory
     {
         $gender = $this->faker->randomElement(['male', 'female']);
         return [
-            'title' => $this->faker->randomElement(['Call of Duty', 'Half-Life 2', 'Tom Clancy\'s Ghost Recon Advanced Warfighter', 'BioShock', 'Super Mario Galaxy', 'Batman: Arkham Asylum', 'Mass Effect 2', 'Portal 2', 'Dishonored', 'The Last of Us']),
+            'title' => $this->faker->unique()->word,
             'name' => $this->faker->name($gender),
             'console' => $this->faker->randomElement(["PlayStation 5", "Xbox Series X|S", "Nintendo Switch", "PlayStation 4", "Xbox One", "Nintendo 3DS", "PlayStation Vita", "Wii U", "PlayStation 3", "Xbox 360"]),
             'description'=>$this->faker->paragraph(),

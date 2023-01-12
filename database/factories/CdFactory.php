@@ -19,7 +19,7 @@ class CdFactory extends Factory
     {
         $gender = $this->faker->randomElement(['male', 'female']);
         return [
-            'title' => $this->faker->randomElement(['Led Zeppelin IV', 'Bad', 'Bat Out of Hell', 'Jagged Little Pill', 'Dirty Dancing', 'Falling into You', 'Metallica', 'Let\'s Talk About Love', 'Legend: The Best of Bob Marley & The Wailers', 'Appetite for Destruction']),
+            'title' => $this->faker->unique()->word,
             'name' => $this->faker->name($gender),
             'band' => $this->faker->randomElement(["The Beatles", "Led Zeppelin", "The Rolling Stones", "Pink Floyd", "Queen", "U2", "Metallica", "AC/DC", "The Eagles", "Nirvana"]),
             'description'=>$this->faker->paragraph(),
