@@ -37,3 +37,10 @@ Route::resource('games', GameController::class);
 
 //Route for our Search Controller functions
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'index'])->name('search');
+
+//Route for our Cart Controller functions
+Route::get('cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+Route::post('cart', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
+Route::post('cart-update', [App\Http\Controllers\CartController::class, 'update'])->name('cart.update');
+Route::post('clear', [App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
+Route::delete('item-remove', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.destroy');

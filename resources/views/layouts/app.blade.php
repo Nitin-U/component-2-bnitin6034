@@ -107,6 +107,12 @@
                             </div>
                         </li>
                         @endguest
+                        <li class="nav-item ms-lg-2">
+                            <a href="{{ route('cart.index') }}" type="button" class="btn btn-primary position-relative">
+                                <i class="fa-solid fa-cart-shopping"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{{ Cart::getTotalQuantity()}} <span class="visually-hidden">unread messages</span></span>
+                            </a>
+
+                        </li>
                     </ul>
                     <!-- <form class="d-flex">
                         <div class="input-group">
