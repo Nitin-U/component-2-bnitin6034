@@ -1,0 +1,117 @@
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-img-book{
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* .select-btn{
+    color:aquamarine;
+    background-color: bisque;
+    border: none; 
+} */
+#button-addnew{
+    color: white;
+    background-color: #6667AB;
+    border: none;
+}
+
+#button-cross{
+    color: #B71C1C;
+}
+
+#button-cross:hover{
+    color:black;
+    transition: 0.5s;
+}
+
+#button-select{
+    color: white;
+    background-color: #6667AB;
+    border: none;
+}
+
+
+@media screen and (max-width: 576px) {
+    .sm-margin-addbtn{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .sm-margin{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .card-img-book{
+        height: 50vw;
+    }
+}
+
+
+.product{background-color: #eee}
+
+.show-edit, .show-delete, .show-anchor{
+    color: #B71C1C;
+    text-decoration: none; 
+}
+.show-edit:hover, .show-delete:hover, .show-anchor:hover{
+    color: #000;
+    transition: .6s ease;
+}
+
+.act-price{
+    color: #B71C1C;
+    font-weight: 700}
+
+.dis-price{
+    text-decoration: line-through}
+
+.color{
+    margin-bottom:10px}
+
+label.radio{
+    cursor: pointer}
+
+label.radio input{
+    position: absolute;
+    top: 0;left: 0;
+    visibility: hidden;
+    pointer-events: none}
+
+label.radio span{
+    padding: 2px 9px;
+    border: 2px solid #B71C1C;
+    display: inline-block;
+    color: #B71C1C;
+    border-radius: 3px;
+    text-transform: uppercase}
+
+label.radio input:checked+span{
+    border-color: #B71C1C;
+    background-color: #B71C1C;
+    color: #fff}
+
+.btn-danger{
+    background-color: #B71C1C !important;
+    border-color: #B71C1C !important}
+
+.btn-danger:hover{
+    background-color: #000 !important;
+    border-color: #000 !important;
+    transition: .6s ease;
+}
+
+.btn-danger:focus{
+    box-shadow: none}
+
+.cart i{
+    margin-right: 10px}
+
+
+
