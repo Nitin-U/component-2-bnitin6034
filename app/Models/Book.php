@@ -21,9 +21,8 @@ class Book extends Model
             ->orWhere('category','like','%'.$filters['search'].'%');
 
             if($filters['sort'] ?? false) {
-                $query->orderBy('price', $filters['sort']);
-            } elseif ($filters['sort'] ?? false) {
-                $query->orderBy('pages', $filters['sort']);
+                $sort = explode("-", $filters['sort']);
+                $query->orderBy($sort[0],$sort[1]);
             }
         }
         else {

@@ -19,6 +19,11 @@ class Game extends Model
             ->orWhere('name','like','%'.$filters['search'].'%')
             ->orWhere('console','like','%'.$filters['search'].'%')
             ->orWhere('category','like','%'.$filters['search'].'%');
+
+            if($filters['sort'] ?? false) {
+                $sort = explode("-", $filters['sort']);
+                $query->orderBy($sort[0],$sort[1]);
+            }
         }
         else {
             return $query->whereRaw('1 = 0');
