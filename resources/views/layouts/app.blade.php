@@ -36,10 +36,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light global_navbar">
+            <div class="container">
                 <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <a href="{{ route('welcome') }}"><img src="{{url('images/logo.png')}}" class="nav-logo"></a>
+                <a href="{{ route('welcome') }}"><img src="{{url('images/emlogo.png')}}" class="nav-logo"></a>
                 <span class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#searchContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
               
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 global_navlink">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('books.index') }}">Book</a>
                         </li>
@@ -96,6 +96,9 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('home') }}">
+                                    {{ __('Dashboard') }}
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

@@ -50,8 +50,16 @@
                             <h5 class="text-uppercase">
                                 <p>Total Pages: {{ $book -> pages }}</p>
                             </h5>
-                            <div class="cart mt-5 align-items-center"> <button
-                                    class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button>
+                            <div class="cart mt-5 align-items-center">
+                                <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" value="book_{{ $book->id }}" name="id">
+                                    <input type="hidden" value="{{ $book->title }}" name="name">
+                                    <input type="hidden" value="{{ $book->price }}" name="price">
+                                    <input type="hidden" value="{{ $book->image }}" name="image">
+                                    <input type="hidden" value="1" name="quantity">
+                                    <button class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button>
+                                </form>
                             </div>
                         </div>
                     </div>

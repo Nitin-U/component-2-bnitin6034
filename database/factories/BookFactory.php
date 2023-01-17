@@ -24,7 +24,7 @@ class BookFactory extends Factory
             'surname' => $this->faker->lastName,
             'description'=>$this->faker->paragraph(),
             'price'=>$this->faker->randomFloat(1,20,30,40),
-            'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg']),
+            'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg']),
             'pages' => $this->faker->numberBetween($min = 100, $max = 500),
         ];
     }

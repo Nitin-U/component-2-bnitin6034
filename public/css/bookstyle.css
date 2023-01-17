@@ -1,7 +1,7 @@
 body{
     background-color: white;
 }
-.container {
+#customcontainer {
     margin: 30px auto
 }
 
@@ -9,7 +9,7 @@ body{
     border-bottom: 3px solid #b71c1c
 }
 
-.container .product-item {
+#customcontainer .product-item {
     min-height: 450px;
     border: none;
     overflow: hidden;
@@ -17,7 +17,7 @@ body{
     border-radius: 0
 }
 
-.container .product-item .product {
+#customcontainer .product-item .product {
     width: 100%;
     height: 350px;
     position: relative;
@@ -25,13 +25,13 @@ body{
     cursor: pointer
 }
 
-.container .product-item .product img {
+#customcontainer .product-item .product img {
     width: 100%;
     height: 100%;
     object-fit: cover
 }
 
-.container .product-item .product .icons .icon {
+#customcontainer .product-item .product .icons .icon {
     width: 40px;
     height: 40px;
     background-color: #fff;
@@ -44,28 +44,28 @@ body{
     cursor: pointer
 }
 
-.container .product-item .product .icons .icon:hover {
+#customcontainer .product-item .product .icons .icon:hover {
     background-color: #b71c1c;
     color: #fff;
 }
 
-.container .product-item .product .icons .icon:nth-last-of-type(3) {
+#customcontainer .product-item .product .icons .icon:nth-last-of-type(3) {
     transition-delay: 0.2s
 }
 
-.container .product-item .product .icons .icon:nth-last-of-type(2) {
+#customcontainer .product-item .product .icons .icon:nth-last-of-type(2) {
     transition-delay: 0.15s
 }
 
-.container .product-item .product .icons .icon:nth-last-of-type(1) {
+#customcontainer .product-item .product .icons .icon:nth-last-of-type(1) {
     transition-delay: 0.1s
 }
 
-.container .product-item:hover .product .icons .icon {
+#customcontainer .product-item:hover .product .icons .icon {
     transform: translateY(-60px)
 }
 
-.container .product-item .tag {
+#customcontainer .product-item .tag {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 500;
@@ -75,17 +75,17 @@ body{
     padding: 0 0.4rem
 }
 
-.container .product-item .title {
+#customcontainer .product-item .title {
     font-size: 0.95rem;
     letter-spacing: 0.5px
 }
 
-.container .product-item .fa-star {
+#customcontainer .product-item .fa-star {
     font-size: 0.65rem;
     color: goldenrod
 }
 
-.container .product-item .price {
+#customcontainer .product-item .price {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600

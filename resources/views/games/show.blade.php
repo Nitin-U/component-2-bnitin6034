@@ -50,8 +50,16 @@
                             <h5 class="text-uppercase">
                                 <p>PEGI: {{ $game -> pegi }}</p>
                             </h5>
-                            <div class="cart mt-5 align-items-center"> <button
-                                    class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button>
+                            <div class="cart mt-5 align-items-center">
+                                <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" value="game_{{ $game->id }}" name="id">
+                                    <input type="hidden" value="{{ $game->title }}" name="name">
+                                    <input type="hidden" value="{{ $game->price }}" name="price">
+                                    <input type="hidden" value="{{ $game->image }}" name="image">
+                                    <input type="hidden" value="1" name="quantity">
+                                    <button class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button>
+                                </form>
                             </div>
                         </div>
                     </div>
