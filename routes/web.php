@@ -43,6 +43,7 @@ Route::get('cart', [App\Http\Controllers\CartController::class, 'index'])->name(
 Route::post('cart', [App\Http\Controllers\CartController::class, 'store'])->name('cart.store');
 Route::post('cart-update', [App\Http\Controllers\CartController::class, 'update'])->name('cart.update');
 Route::post('clear', [App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
+Route::post('successful', [App\Http\Controllers\CartController::class, 'clearAndRedirect'])->name('cart.success');
 Route::delete('item-remove', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.destroy');
 
 //Route for our MailChimp
