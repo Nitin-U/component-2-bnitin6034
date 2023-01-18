@@ -1,7 +1,10 @@
 .registration-form{
 	padding: 15px 0;
 }
-
+.form-control.customformcontrol{
+    background-color: #E9ECEF;
+    border-color: #E9ECEF;
+}
 .registration-form form{
     background-color: #fff;
     max-width: 600px;

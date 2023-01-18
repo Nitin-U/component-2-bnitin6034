@@ -20,44 +20,44 @@
             </div> -->
             
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('title') is-invalid @enderror" name="title" value="{{old('title')}}" id="username" placeholder="Title">
+                <input type="text" class="form-control customformcontrol item @error('title') is-invalid @enderror" name="title" value="{{old('title')}}" id="username" placeholder="Title">
                 @error('title')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('name') is-invalid @enderror" name="name" value="{{old('name')}}" id="password" placeholder="Name (optional)">
+                <input type="text" class="form-control customformcontrol item @error('name') is-invalid @enderror" name="name" value="{{old('name')}}" id="password" placeholder="Name (optional)">
                 @error('name')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('band') is-invalid @enderror" name="band" value="{{old('band')}}" id="email" placeholder="Band">
+                <input type="text" class="form-control customformcontrol item @error('band') is-invalid @enderror" name="band" value="{{old('band')}}" id="email" placeholder="Band">
                 @error('band')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('price') is-invalid @enderror" name="price" value="{{old('price')}}" id="phone-number" placeholder="Price">
+                <input type="text" class="form-control customformcontrol item @error('price') is-invalid @enderror" name="price" value="{{old('price')}}" id="phone-number" placeholder="Price">
                 @error('price')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <textarea class="form-control item custom-textarea @error('description') is-invalid @enderror" name="description" id="exampleFormControlTextarea1" rows="3"
+                <textarea class="form-control customformcontrol item custom-textarea @error('description') is-invalid @enderror" name="description" id="exampleFormControlTextarea1" rows="3"
                     placeholder="Description">{{old('description')}}</textarea>
                     @error('description')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('playlength') is-invalid @enderror" name="playlength" value="{{old('playlength')}}" id="birth-date" placeholder="Playlength">
+                <input type="text" class="form-control customformcontrol item @error('playlength') is-invalid @enderror" name="playlength" value="{{old('playlength')}}" id="birth-date" placeholder="Playlength">
                 @error('playlength')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('image') is-invalid @enderror" name="image" id="birth-date" placeholder="Image">
+                <input type="file" class="form-control customformcontrol item @error('image') is-invalid @enderror" name="image" id="birth-date" placeholder="Image">
                 @error('image')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror

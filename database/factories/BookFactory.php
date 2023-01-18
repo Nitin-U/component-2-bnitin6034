@@ -20,11 +20,11 @@ class BookFactory extends Factory
         $gender = $this->faker->randomElement(['male', 'female']);
         return [
             'title' => $this->faker->unique()->word,
-            'firstname' => $this->faker->firstName($gender),
-            'surname' => $this->faker->lastName,
+            'name' => $this->faker->firstName($gender),
+            'author' => $this->faker->name($gender),
             'description'=>$this->faker->paragraph(),
             'price'=>$this->faker->randomFloat(1,20,30,40),
-            'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg']),
+            'image' => $this->faker->randomElement(['book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg', 'book5.jpg', 'book6.jpg']),
             'pages' => $this->faker->numberBetween($min = 100, $max = 500),
         ];
     }

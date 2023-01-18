@@ -43,14 +43,16 @@ class BookController extends Controller
         //dd($request);
         $validateMsg = $request -> validate([
             'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-            'firstname' => 'nullable|alpha|min:3',
-            'surname' => 'required|alpha',
+            'name' => 'nullable|min:3|regex:/^[A-Za-z. ]+$/',
+            'author' => 'required|regex:/^[A-Za-z. ]+$/',
             'price' => 'required|numeric',
             'description' => 'required|min:25',
             'pages' => 'required|numeric',
             'image' => 'required',
         ],[
             'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'name.regex' => 'Name must only contain alphabets, whitespace & dots',
+            'author.regex' => 'Author must only contain alphabets, whitespace & dots',
             'image.image' => 'Selected file must be an image.'
         ]);
         Book::create($request->all());
@@ -93,13 +95,15 @@ class BookController extends Controller
         }
         $validateMsg = $request -> validate([
             'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-            'firstname' => 'nullable|alpha|min:3',
-            'surname' => 'required|alpha',
+            'name' => 'nullable|regex:/^[A-Za-z. ]+$/|min:3',
+            'author' => 'required|regex:/^[A-Za-z. ]+$/',
             'price' => 'required|numeric',
             'description' => 'required|min:25',
             'pages' => 'required|numeric',
         ],[
-            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens'
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'name.regex' => 'Name must only contain alphabets, whitespace & dots',
+            'author.regex' => 'Author must only contain alphabets, whitespace & dots',
         ]);
 
         $request->except('image');

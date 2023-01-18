@@ -42,14 +42,16 @@ class CdController extends Controller
     {
         $validateMsg = $request -> validate([
             'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-            'name' => 'nullable|alpha|min:3',
-            'band' => 'required|alpha',
+            'name' => 'nullable|regex:/^[A-Za-z. ]+$/|min:3',
+            'band' => 'required|regex:/^[\pL\s]+$/u',
             'price' => 'required|numeric',
             'description' => 'required|min:25',
             'playlength' => 'required|numeric',
             'image' => 'required',
         ],[
             'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'name.regex' => 'Name must only contain alphabets, whitespace & dots',
+            'band.regex' => 'Band must only contain alphabets, whitespace',
             'image.image' => 'Selected file must be an image.'
         ]);
         Cd::create($request->all());
@@ -92,13 +94,15 @@ class CdController extends Controller
         }
         $validateMsg = $request -> validate([
             'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-            'name' => 'nullable|alpha|min:3',
-            'band' => 'required|alpha',
+            'name' => 'nullable|regex:/^[A-Za-z. ]+$/|min:3',
+            'band' => 'required|regex:/^[\pL\s]+$/u',
             'price' => 'required|numeric',
             'description' => 'required|min:25',
             'playlength' => 'required|numeric',
         ],[
-            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens'
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'name.regex' => 'Name must only contain alphabets, whitespace & dots',
+            'band.regex' => 'Band must only contain alphabets, whitespace'
         ]);
 
         $request->except('image');

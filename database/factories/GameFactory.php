@@ -24,7 +24,7 @@ class GameFactory extends Factory
             'console' => $this->faker->randomElement(["PlayStation 5", "Xbox Series X|S", "Nintendo Switch", "PlayStation 4", "Xbox One", "Nintendo 3DS", "PlayStation Vita", "Wii U", "PlayStation 3", "Xbox 360"]),
             'description'=>$this->faker->paragraph(),
             'price'=>$this->faker->randomFloat(1,20,30,40),
-            'image' => $this->faker->randomElement(['game1.jpg', 'game2.jpg', 'game3.jpg', 'game4.jpg']),
+            'image' => $this->faker->randomElement(['game1.jpg', 'game2.jpg', 'game3.jpg', 'game4.jpg', 'game5.jpg', 'game6.jpg']),
             'pegi' => $this->faker->randomElement(['3','7','12','16','18']),
         ];
     }

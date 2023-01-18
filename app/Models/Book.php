@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'firstname', 'surname', 'price', 'description', 'pages', 'image'];
+    protected $fillable = ['title', 'name', 'author', 'price', 'description', 'pages', 'image'];
     protected $guarded = ['id'];
 
     public function scopeFilter($query, array $filters)
@@ -16,8 +16,8 @@ class Book extends Model
         if($filters['search'] ?? false)
         {
             $query->where('title','like','%'.$filters['search'].'%')
-            ->orWhere('firstname','like','%'.$filters['search'].'%')
-            ->orWhere('surname','like','%'.$filters['search'].'%')
+            ->orWhere('name','like','%'.$filters['search'].'%')
+            ->orWhere('author','like','%'.$filters['search'].'%')
             ->orWhere('category','like','%'.$filters['search'].'%');
 
             if($filters['sort'] ?? false) {

@@ -42,14 +42,16 @@ class GameController extends Controller
     {
         $validateMsg = $request -> validate([
             'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-            'name' => 'nullable|alpha|min:3',
-            'console' => 'required|alpha',
+            'name' => 'nullable|regex:/^[A-Za-z. ]+$/|min:3',
+            'console' => 'required|regex:/^[a-zA-Z0-9 ]+$/',
             'price' => 'required|numeric',
             'description' => 'required|min:25',
             'pegi' => 'required|numeric',
             'image' => 'required',
         ],[
             'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'name.regex' => 'Name must only contain alphabets, whitespace & dots',
+            'console.regex' => 'Console must only contain alphabets, whitespace & numbers',
             'image.image' => 'Selected file must be an image.'
         ]);
         Game::create($request->all());
@@ -92,13 +94,15 @@ class GameController extends Controller
         }
         $validateMsg = $request -> validate([
             'title' => 'required|max:50|regex:/^[\pL\s\-]+$/u',
-            'name' => 'nullable|alpha|min:3',
-            'console' => 'required|alpha',
+            'name' => 'nullable|regex:/^[A-Za-z. ]+$/|min:3',
+            'console' => 'required|regex:/^[a-zA-Z0-9 ]+$/',
             'price' => 'required|numeric',
             'description' => 'required|min:25',
             'pegi' => 'required|numeric',
         ],[
-            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens'
+            'title.regex' => 'Title must only contain alphabets, whitespace & hyphens',
+            'name.regex' => 'Name must only contain alphabets, whitespace & dots',
+            'console.regex' => 'Console must only contain alphabets, whitespace & numbers'
         ]);
 
         $request->except('image');

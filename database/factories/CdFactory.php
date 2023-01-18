@@ -24,7 +24,7 @@ class CdFactory extends Factory
             'band' => $this->faker->randomElement(["The Beatles", "Led Zeppelin", "The Rolling Stones", "Pink Floyd", "Queen", "U2", "Metallica", "AC/DC", "The Eagles", "Nirvana"]),
             'description'=>$this->faker->paragraph(),
             'price'=>$this->faker->randomFloat(1,20,30,40),
-            'image' => $this->faker->randomElement(['cd1.jpg', 'cd2.jpg', 'cd3.jpg', 'cd4.jpg']),
+            'image' => $this->faker->randomElement(['cd1.jpg', 'cd2.jpg', 'cd3.jpg', 'cd4.jpg', 'cd5.jpg','cd6.jpg']),
             'playlength' => $this->faker->numberBetween($min = 2, $max = 59),
         ];
     }

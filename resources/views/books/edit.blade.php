@@ -21,44 +21,44 @@
             </div>
             
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('title') is-invalid @enderror" name="title" value="{{ $book->title }}" id="username" placeholder="Title">
+                <input type="text" class="form-control customformcontrol item @error('title') is-invalid @enderror" name="title" value="{{ $book->title }}" id="username" placeholder="Title">
                 @error('title')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('firstname') is-invalid @enderror" name="firstname" value="{{ $book->firstname }}" id="password" placeholder="Firstname (optional)">
-                @error('firstname')
+                <input type="text" class="form-control customformcontrol item @error('name') is-invalid @enderror" name="name" value="{{ $book->name }}" id="password" placeholder="Name (optional)">
+                @error('name')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('surname') is-invalid @enderror" name="surname" value="{{ $book->surname }}" id="email" placeholder="Surname">
-                @error('surname')
+                <input type="text" class="form-control customformcontrol item @error('author') is-invalid @enderror" name="author" value="{{ $book->author }}" id="email" placeholder="Author">
+                @error('author')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('price') is-invalid @enderror" name="price" value="{{ $book->price }}" id="phone-number" placeholder="Price">
+                <input type="text" class="form-control customformcontrol item @error('price') is-invalid @enderror" name="price" value="{{ $book->price }}" id="phone-number" placeholder="Price">
                 @error('price')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <textarea class="form-control item custom-textarea @error('description') is-invalid @enderror" name="description" id="exampleFormControlTextarea1" rows="3"
+                <textarea class="form-control customformcontrol item custom-textarea @error('description') is-invalid @enderror" name="description" id="exampleFormControlTextarea1" rows="3"
                     placeholder="Description">{{ $book->description }}</textarea>
                     @error('description')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('pages') is-invalid @enderror" name="pages" value="{{ $book->pages }}" id="birth-date" placeholder="Pages">
+                <input type="text" class="form-control customformcontrol item @error('pages') is-invalid @enderror" name="pages" value="{{ $book->pages }}" id="birth-date" placeholder="Pages">
                 @error('pages')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group mb-4">
-                <input type="text" class="form-control item @error('image') is-invalid @enderror" name="image" id="birth-date" placeholder="Image">
+                <input type="file" class="form-control customformcontrol item @error('image') is-invalid @enderror" name="image" id="birth-date" placeholder="Image">
                 @error('image')
                 <span class="text-danger ms-2 validation-msg">{{ $message }}</span>
                 @enderror
