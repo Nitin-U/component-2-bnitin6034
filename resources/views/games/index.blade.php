@@ -13,9 +13,11 @@ $count=0
             </span>
             Products
         </div>
+        @can('isgameAdmin')
         <div>
             <a class="btn btn-primary" href="{{ route('games.create') }}">Add Game</a>
         </div>
+        @endcan
     </h5>
     <div class="row">
         @foreach($games as $game)

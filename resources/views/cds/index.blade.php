@@ -13,9 +13,11 @@ $count=0
             </span>
             Products
         </div>
+        @can('iscdAdmin')
         <div>
             <a class="btn btn-primary" href="{{ route('cds.create') }}">Add Cd</a>
         </div>
+        @endcan
     </h5>
     <div class="row">
         @foreach($cds as $cd)

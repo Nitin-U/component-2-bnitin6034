@@ -13,9 +13,11 @@ $count=0
             </span>
             Products
         </div>
+        @can('isbookAdmin')
         <div>
             <a class="btn btn-primary" href="{{ route('books.create') }}">Add Book</a>
         </div>
+        @endcan
     </h5>
     <div class="row">
         @foreach($books as $book)

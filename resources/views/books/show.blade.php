@@ -27,6 +27,7 @@
                                         </span>
                                     </a>
                                 </div>
+                                @can('isbookAdmin')
                                 <form action="{{ route('books.destroy',$book->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -36,6 +37,7 @@
                                         <button class="show-delete btn fa-solid fa-trash"></button>
                                     </div>
                                 </form>
+                                @endcan
 
                             </div>
                             <div class="mt-4 mb-3"> <span
