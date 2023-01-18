@@ -44,3 +44,23 @@ Route::post('cart', [App\Http\Controllers\CartController::class, 'store'])->name
 Route::post('cart-update', [App\Http\Controllers\CartController::class, 'update'])->name('cart.update');
 Route::post('clear', [App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
 Route::delete('item-remove', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.destroy');
+
+//Route for our MailChimp
+Route::get('newsletter', function() {
+    request()->validate(['email' => 'required|email']);
+    
+    $mailchimp = new \MailchimpMarketing\ApiClient();
+
+    $mailchimp->setConfig([
+        'apiKey' =>config('services.mailchimp.key'),
+        'server' => 'us21'
+    ]);
+
+    $response = $mailchimp->lists->addListMember('1401b68cce',[
+        'email_address' => request('email'),
+        'status' => 'subscribed'
+    ]);
+
+    return redirect('/')->with('success','Congrats! Your are now a subscribed to our newsletter');
+
+});
