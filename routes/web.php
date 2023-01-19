@@ -57,7 +57,7 @@ Route::get('newsletter', function() {
         'server' => 'us21'
     ]);
 
-    $response = $mailchimp->lists->addListMember('1401b68cce',[
+    $response = $mailchimp->lists->addListMember('c34e0049d9',[
         'email_address' => request('email'),
         'status' => 'subscribed'
     ]);

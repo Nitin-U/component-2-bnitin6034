@@ -1,6 +1,10 @@
 body{
     background-color: white;
 }
+ul.icons a{
+    text-decoration: none;
+    color: black;
+}
 #customcontainer {
     margin: 30px auto
 }

@@ -57,13 +57,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 global_navlink">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('books.index') }}">Book</a>
+                            <a class="nav-link customnavlink" href="{{ route('books.index') }}">Book</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cds.index') }}">Cd</a>
+                            <a class="nav-link customnavlink" href="{{ route('cds.index') }}">Cd</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('games.index') }}">Game</a>
+                            <a class="nav-link customnavlink" href="{{ route('games.index') }}">Game</a>
                         </li>
                         <!--li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -79,13 +79,13 @@
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link customnavlink" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @endif
 
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link customnavlink" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else
@@ -177,7 +177,7 @@
                     </div>
                     
                 </div>
-                <p class="copyright">Essential Mart | Nitin Utsav Bartaula | © 2022</p>
+                <p class="copyright">Essential Mart | Nitin Utsav Bartaula | © 2023</p>
             </div>
         </footer>
     </div>

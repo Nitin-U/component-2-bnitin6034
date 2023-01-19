@@ -43,7 +43,7 @@
                                     <img src="images/user.png" class="img-radius"
                                         alt="User-Profile-Image">
                                 </div>
-                                <h6 class="f-w-600">{{ Auth::user()->name }}</h6>
+                                <h6 class="f-w-600">Hi! {{ Auth::user()->name }}</h6>
                                 <p>Welcome to Essential Mart </p>
                                 <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                             </div>

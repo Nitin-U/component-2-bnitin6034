@@ -22,9 +22,12 @@ $count=0
     <div class="row">
         @foreach($cds as $cd)
         <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-            <div class="product"> <a href="{{ route('cds.show',$cd->id) }}"><img src="/images/{{ $cd->image }}" alt=""></a>
+            <div class="product"> <a href="{{ route('cds.show',$cd->id) }}"><img src="/images/{{ $cd->image }}"
+                        alt=""></a>
                 <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    <a href="{{ route('cds.show',$cd->id) }}">
+                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    </a>
                     <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" value="cd_{{ $cd->id }}" name="id">

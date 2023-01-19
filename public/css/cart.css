@@ -2,3 +2,6 @@
     display: flex;
     justify-content: flex-end;
 }
+.fa-trash{
+    color: #B71C1C;
+}

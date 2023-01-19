@@ -112,9 +112,10 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success','All Cart Item Removed Successfully!');
     }
 
-    public function clearAndRedirect()
+    public function clearAndRedirect(Request $request)
     {
+        $request = \Cart::getTotal();
         \Cart::clear();
-        return view('successful')->with('success','Order Successful!');
+        return view('successful',compact('request'))->with('success','Order Successful!');
     }
 }

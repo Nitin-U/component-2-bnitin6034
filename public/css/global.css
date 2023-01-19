@@ -20,6 +20,10 @@ body,div,h1,h2,h3,h4,h5,h6,a,p{
     background-color: #6667AB;
 }
 
+a.nav-link.customnavlink:hover{
+  color: #B71C1C;
+}
+
 .nav-logo{
     width: 50px;
     margin: 0;
@@ -124,7 +128,6 @@ body{
 .footer-dark .copyright {
   text-align:center;
   padding-top:24px;
-  opacity:0.3;
   font-size:13px;
   margin-bottom:0;
 }
